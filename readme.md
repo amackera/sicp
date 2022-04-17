@@ -23,3 +23,20 @@ issue or pull request.
 2. Install [Racket](https://download.racket-lang.org) `brew install racket`
 3. Install [`racket-mode`](https://www.racket-mode.com/) for Emacs via MELPA
 4. Open the exercise file you want to run, and type `C-c C-c` to eval the exercise in a Racket REPL
+
+## Why did you do this?
+
+I have read `sicp` a number of times (once from cover-to-cover, and
+countless times in a more ad-hoc fashion), yet I feel like I've never
+truly internalized the lessons from this excellent book. I've never
+tried to complete the exercises beyond some basic thinking and
+theory-coding. The exercises are published in the book for a reason,
+and eventually I realized I was missing out on most of the value by
+skipping over them.
+
+## Completeness
+
+I'm still working my way through the book systematically, so this
+repository is a work in progress. Don't judge me for not finishing in
+a timely manner. I'm doing this in my spare time, in between starting
+companies and being a full-time engineer and entrepreneur.
