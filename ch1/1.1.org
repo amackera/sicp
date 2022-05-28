@@ -1,0 +1,100 @@
+#+begin_src racket
+  10
+#+end_src
+
+#+RESULTS:
+: 10
+
+#+begin_src racket
+  (+ 5 3 4)
+#+end_src
+
+#+RESULTS:
+: 12
+
+#+begin_src racket
+  (- 9 1)
+#+end_src
+
+#+RESULTS:
+: 8
+
+#+begin_src racket
+(/ 6 2)
+#+end_src
+
+#+begin_src racket
+  (+ (* 2
+        4) (- 4 6))
+#+end_src
+
+#+RESULTS:
+: 6
+
+#+begin_src racket
+  (define a 3)
+  (define b (+ a 1))
+
+  (+ a b (* a b))
+#+end_src
+
+#+RESULTS:
+: 19
+
+#+begin_src racket
+  (define a 3)
+  (define b (+ a 1))
+
+  (= a b)
+#+end_src
+
+#+RESULTS:
+: #f
+
+#+begin_src racket
+  (define a 3)
+  (define b (+ a 1))
+
+  (if (and (> b a) (< b (* a b)))
+    b
+    a)
+#+end_src
+
+#+RESULTS:
+: 4
+
+#+begin_src racket
+  (define a 3)
+  (define b (+ a 1))
+
+  (cond ((= a 4) 6)
+        ((= b 4) (+ 6 7 a))
+        (else 25))
+#+end_src
+
+#+RESULTS:
+: 16
+
+
+#+begin_src racket
+  (define a 3)
+  (define b (+ a 1))
+
+  (+ 2 (if (> b a ) b a))
+#+end_src
+
+#+RESULTS:
+: 6
+
+#+begin_src racket
+  (define a 3)
+  (define b (+ a 1))
+
+  (* (cond ((> a b) a)
+           ((< a b) b)
+           (else -1))
+     (+ a 1))
+#+end_src
+
+#+RESULTS:
+: 16
