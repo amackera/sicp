@@ -1,0 +1,111 @@
+* Exercise 1.10 from SICP
+
+#+name: acker
+#+begin_src racket :results output
+  (define (A x y)
+    (cond ((= y 0) 0)
+          ((= x 0) (* 2 y))
+          ((= y 1) 2)
+          (else (A (- x 1)
+                   (A x (- y 1))))))
+
+#+end_src
+
+#+RESULTS: acker
+
+#+begin_src racket :noweb yes :results output
+  <<acker>>
+
+  (A 1 10)
+  (A 2 4)
+  (A 3 3)
+#+end_src
+
+#+RESULTS:
+: 1024
+: 65536
+: 65536
+
+Consider ~(define (f n) (A 0 n))~:
+
+#+begin_src racket :noweb yes :results output
+  <<acker>>
+
+  (define (f n) (A 0 n))
+
+  (f -2)
+  (f -1)
+  (f 0)
+  (f 1)
+  (f 2)
+  (f 3)
+  (f 4)
+  (f 100)
+
+#+end_src
+
+#+RESULTS:
+: -4
+: -2
+: 0
+: 2
+: 4
+: 6
+: 8
+: 200
+
+Looks like ~f(n) = 2n~ to me.
+
+Consider ~(define (g n) (A 1 n))~:
+
+#+begin_src racket :noweb yes :results output
+  <<acker>>
+
+  (define (g n) (A 1 n))
+
+  (g 0)
+  (g 1)
+  (g 2)
+  (g 3)
+  (g 4)
+  (g 5)
+  (g 6)
+  (g 7)
+  (g 8)
+#+end_src
+
+#+RESULTS:
+: 0
+: 2
+: 4
+: 8
+: 16
+: 32
+: 64
+: 128
+: 256
+
+Looks like ~g(n) = 2^n~ to me.
+
+Consider ~(define (h n) (A 2 n))~
+
+#+begin_src racket :noweb yes :results output
+  <<acker>>
+
+  (define (h n) (A 2 n))
+
+  (h 0)
+  (h 1)
+  (h 2)
+  (h 3)
+  (h 4)
+#+end_src
+
+#+RESULTS:
+: 0
+: 2
+: 4
+: 16
+: 65536
+
+Looks like ~h(n) = 2^h(n-1)~
