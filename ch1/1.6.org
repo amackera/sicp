@@ -92,4 +92,5 @@ arguments.
 
 By evaluating all the operands, including the ~else-clause~, the
 interpreter unfortunately enters an infinitely recursive process
-(~new-sqrt-iter~ calls itself, forever, and never terminates).
+(~new-sqrt-iter~ calls itself, forever, and the process never
+terminates).
