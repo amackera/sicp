@@ -62,7 +62,7 @@ root finder. First we must create all the supporting fns
 #+RESULTS: fns
 : 3.00009155413138
 
-`new-if` version
+~new-if~ version
 
 #+begin_src racket :noweb yes
   <<fns>>
