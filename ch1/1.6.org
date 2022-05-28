@@ -28,7 +28,7 @@ Let's try this out
 #+RESULTS:
 : 0
 
-So far, it looks like `new-if` is working.  Let's try our iterative
+So far, it looks like ~new-if~ is working.  Let's try our iterative
 root finder. First we must create all the supporting fns
 
 #+name: fns
@@ -81,15 +81,15 @@ root finder. First we must create all the supporting fns
 #+RESULTS: <infinite loop>
 
 
-The `new-sqrt-iter` has a problem. We pass the arguments
-`(good-enough?  guess x)`, `guess`, and the recursive call to
-`(new-sqrt-iter (improve guess x) x)` to `new-if; however, since the
+The ~new-sqrt-iter~ has a problem. We pass the arguments
+~(good-enough?  guess x)~, ~guess~, and the recursive call to
+~(new-sqrt-iter (improve guess x) x)~ to ~new-if~; however, since the
 Lisp interpreter evaluates the expressions in "applicative order"
 instead of "normal order", the interpreter will evaluate the operator
-(`new-if`) to retrieve the procedure, then it will evaluate _all_ the
+(~new-if~) to retrieve the procedure, then it will evaluate _all_ the
 operands before finally applying the procedure to the resulting
 arguments.
 
-By evaluating all the operands, including the `else-clause`, the
+By evaluating all the operands, including the ~else-clause~, the
 interpreter unfortunately enters an infinitely recursive process
-(`new-sqrt-iter` calls itself, forever, and never terminates).
+(~new-sqrt-iter~ calls itself, forever, and never terminates).
