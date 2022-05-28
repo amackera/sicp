@@ -22,6 +22,7 @@ issue or pull request.
 1. Install [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) via the App Store
 2. Install [Racket](https://download.racket-lang.org) `brew install racket`
 3. Install [`racket-mode`](https://www.racket-mode.com/) for Emacs via MELPA
+4. Install [`emacs-ob-racket`](https://github.com/hasu/emacs-ob-racket) for Org mode execution of files
 4. Open the exercise file you want to run, and type `C-c C-c` to eval the exercise in a Racket REPL
 
 ## Why did you do this?
